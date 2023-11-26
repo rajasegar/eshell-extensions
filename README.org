@@ -1,19 +1,20 @@
 * eshell-extensions
 
 ** Installation
-```
-git clone https://github.com/rajasegar/eshell-extensions.git ~/.emacs.d/elpa
-```
 
-```elisp
+#+begin_src  eshell
+git clone https://github.com/rajasegar/eshell-extensions.git ~/.emacs.d/elpa
+#+end_src
+
+#+begin_src  emacs-lisp
 (use-package eshell-extensions
   :load-path "elpa/eshell-extensions/")
-```
+#+end_src
 
 ** Usage
 Use key-bindings for the available functions:
 
-```elisp
+#+begin_src  emacs-lisp
 (use-package general
   :ensure t
   :config 
@@ -38,5 +39,4 @@ Use key-bindings for the available functions:
    "vl" 'eshell-extensions/run-previous-eshell-command
    "vk" 'eshell-extensions/kill-buffer-eshell-command-output
    ))
-
-```
+#+end_src
