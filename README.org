@@ -1,5 +1,42 @@
 * eshell-extensions
 
 ** Installation
+```
+git clone https://github.com/rajasegar/eshell-extensions.git ~/.emacs.d/elpa
+```
+
+```elisp
+(use-package eshell-extensions
+  :load-path "elpa/eshell-extensions/")
+```
 
 ** Usage
+Use key-bindings for the available functions:
+
+```elisp
+(use-package general
+  :ensure t
+  :config 
+  (general-define-key
+   "M-x" 'counsel-M-x)
+  
+  (general-define-key
+   :states '(normal visual emacs)
+   :prefix "SPC"
+   :non-normal-prefix "C-SPC"
+   
+   "4" '(:ignore t :which-key "Eshell")
+   "4v" 'eshell-extensions/eshell-vertical
+   "4h" 'eshell-extensions/eshell-horizontal
+
+   "a" '(:ignore t :which-key "Applications")
+   "at" 'eshell-extensions/open-new-eshell
+   
+   "v" '(:ignore t :which-key "Eshell")
+   "vc" 'eshell-extensions/eshell-command-current-line
+   "vr" 'eshell-command
+   "vl" 'eshell-extensions/run-previous-eshell-command
+   "vk" 'eshell-extensions/kill-buffer-eshell-command-output
+   ))
+
+```
