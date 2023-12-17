@@ -1,4 +1,5 @@
 * eshell-extensions
+A bunch of extension functions to work more productively with eshell 
 
 ** Installation
 
@@ -18,25 +19,20 @@ Use key-bindings for the available functions:
 (use-package general
   :ensure t
   :config 
-  (general-define-key
-   "M-x" 'counsel-M-x)
   
   (general-define-key
    :states '(normal visual emacs)
    :prefix "SPC"
    :non-normal-prefix "C-SPC"
    
-   "4" '(:ignore t :which-key "Eshell")
-   "4v" 'eshell-extensions/eshell-vertical
-   "4h" 'eshell-extensions/eshell-horizontal
-
-   "a" '(:ignore t :which-key "Applications")
-   "at" 'eshell-extensions/open-new-eshell
+   "e" '(:ignore t :which-key "Eshell")
+   "ec" 'eshell-extensions/eshell-command-current-line
+   "eh" 'eshell-extensions/eshell-horizontal
+   "ek" 'eshell-extensions/kill-buffer-eshell-command-output
+   "el" 'eshell-extensions/run-previous-eshell-command
+   "et" 'eshell-extensions/open-new-eshell
+   "ev" 'eshell-extensions/eshell-vertical
    
-   "v" '(:ignore t :which-key "Eshell")
-   "vc" 'eshell-extensions/eshell-command-current-line
-   "vr" 'eshell-command
-   "vl" 'eshell-extensions/run-previous-eshell-command
-   "vk" 'eshell-extensions/kill-buffer-eshell-command-output
    ))
 #+end_src
+
