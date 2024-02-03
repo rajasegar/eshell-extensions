@@ -1,6 +1,6 @@
-;;; eshell-extensions.el --- A bunch of extensions for eshell
+;;; eshell-extensions.el --- A bunch of extensions for eshell  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2023 Eshell-Extensions Chandran
+;; Copyright (C) 2024 Eshell-Extensions Chandran
 
 ;; Author: Eshell-Extensions Chandran <eshell-extensions.c@gmail.com>
 ;; Version: 1.0
@@ -22,14 +22,14 @@
 
 ;;;###autoload
 (defun eshell-extensions/open-new-eshell ()
-  "Open new shell instance everytime"
+  "Open new shell instance everytime."
   (interactive)
   (eshell 'N))
 
 
 ;;;###autoload
 (defun eshell-extensions/eshell-vertical ()
-  "Open new shell instance in vertical split"
+  "Open new shell instance in vertical split."
   (interactive)
   (split-window-below)
   (eshell 'N))
@@ -37,7 +37,7 @@
 
 ;;;###autoload
 (defun eshell-extensions/eshell-horizontal ()
-  "Open new shell instance in horizontal split"
+  "Open new shell instance in horizontal split."
   (interactive)
   (split-window-right)
   (eshell 'N))
@@ -45,14 +45,14 @@
 
 ;;;###autoload
 (defun eshell-extensions/run-previous-eshell-command ()
-  "Run the previous command in eshell"
+  "Run the previous command in eshell."
   (interactive)
   (eshell-command (eshell-get-history 0)))
 
 
 ;;;###autoload
 (defun eshell-extensions/eshell-command-current-line ()
-  "Run the command from current line in eshell"
+  "Run the command from current line in eshell."
   (interactive)
   (let ((cmd (buffer-substring-no-properties (line-beginning-position) (line-end-position))))
   (message "Running command: %s" cmd)
@@ -61,7 +61,7 @@
 
 ;;;###autoload
 (defun eshell-extensions/kill-buffer-eshell-command-output ()
-  "Kill the buffer named *Eshell Command Output*"
+  "Kill the buffer named *Eshell Command Output*."
   (interactive)
   (kill-buffer "*Eshell Command Output*"))
 
