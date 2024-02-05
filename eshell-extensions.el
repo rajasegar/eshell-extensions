@@ -1,12 +1,12 @@
 ;;; eshell-extensions.el --- A bunch of extensions for eshell  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2024 Eshell-Extensions Chandran
+;; Copyright (C) 2024 Rajasegar Chandran
 
-;; Author: Eshell-Extensions Chandran <eshell-extensions.c@gmail.com>
+;; Author: Rajasegar Chandran <rajasegar.c@gmail.com>
 ;; Version: 1.0
 ;; Package-Requires ((cl-lib "0.5"))
 ;; Keywords: eshell, extensions
-;; URL: https://github.com/eshell-extensions/eshell-extensions.el
+;; URL: https://github.com/rajasegar/eshell-extensions.el
 
 ;;; Commentary:
 
