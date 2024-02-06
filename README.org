@@ -26,12 +26,12 @@ Use key-bindings for the available functions:
    :non-normal-prefix "C-SPC"
    
    "e" '(:ignore t :which-key "Eshell")
-   "ec" 'eshell-extensions/eshell-command-current-line
-   "eh" 'eshell-extensions/eshell-horizontal
-   "ek" 'eshell-extensions/kill-buffer-eshell-command-output
-   "el" 'eshell-extensions/run-previous-eshell-command
-   "et" 'eshell-extensions/open-new-eshell
-   "ev" 'eshell-extensions/eshell-vertical
+   "ec" 'eshell-extensions-command-current-line
+   "eh" 'eshell-extensions-horizontal
+   "ek" 'eshell-extensions-kill-output-buffer
+   "el" 'eshell-extensions-previous-command
+   "et" 'eshell-extensions-new
+   "ev" 'eshell-extensions-vertical
    
    ))
 #+end_src

@@ -4,7 +4,7 @@
 
 ;; Author: Rajasegar Chandran <rajasegar.c@gmail.com>
 ;; Version: 1.0
-;; Package-Requires ((cl-lib "0.5"))
+;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: eshell, extensions
 ;; URL: https://github.com/rajasegar/eshell-extensions.el
 
@@ -21,14 +21,14 @@
 (require 'eshell)
 
 ;;;###autoload
-(defun eshell-extensions/open-new-eshell ()
+(defun eshell-extensions-new ()
   "Open new shell instance everytime."
   (interactive)
   (eshell 'N))
 
 
 ;;;###autoload
-(defun eshell-extensions/eshell-vertical ()
+(defun eshell-extensions-vertical ()
   "Open new shell instance in vertical split."
   (interactive)
   (split-window-below)
@@ -36,7 +36,7 @@
 
 
 ;;;###autoload
-(defun eshell-extensions/eshell-horizontal ()
+(defun eshell-extensions-horizontal ()
   "Open new shell instance in horizontal split."
   (interactive)
   (split-window-right)
@@ -44,14 +44,14 @@
 
 
 ;;;###autoload
-(defun eshell-extensions/run-previous-eshell-command ()
+(defun eshell-extensions-previous-command ()
   "Run the previous command in eshell."
   (interactive)
   (eshell-command (eshell-get-history 0)))
 
 
 ;;;###autoload
-(defun eshell-extensions/eshell-command-current-line ()
+(defun eshell-extensions-command-current-line ()
   "Run the command from current line in eshell."
   (interactive)
   (let ((cmd (buffer-substring-no-properties (line-beginning-position) (line-end-position))))
@@ -60,7 +60,7 @@
 
 
 ;;;###autoload
-(defun eshell-extensions/kill-buffer-eshell-command-output ()
+(defun eshell-extensions-kill-output-buffer ()
   "Kill the buffer named *Eshell Command Output*."
   (interactive)
   (kill-buffer "*Eshell Command Output*"))
