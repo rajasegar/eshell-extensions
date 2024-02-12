@@ -60,7 +60,9 @@
 (defun eshell-extensions-previous-command ()
   "Run the previous command in eshell."
   (interactive)
-  (eshell-command (eshell-get-history 0)))
+  (if (fboundp 'eshell-get-history)
+      (eshell-command (eshell-get-history 0))
+    (error "No previous command in history.")))
 
 
 ;;;###autoload
